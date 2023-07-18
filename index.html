@@ -13,7 +13,31 @@
             <h1>Expense Tracker</h1>
             <h4>Keep Track Of All Your Expenses</h4>
         </div>
-        
+        <div class="input-fields">
+            <div class="input-with-label">
+                <label for="expense-name">Expense:</label>
+                <input id="expense-name" type="text" placeholder="Expense name...">
+            </div>
+            <div class="input-with-label">
+                <label for="expense-price">Price in USD:</label>
+                <input id="expense-price" type="number" min="0" step="1" placeholder="Expense price...">
+            </div>
+            <button>Add to the table</button>
+        </div>
+        <table>
+            <table id="expenses-table">
+                <tr>
+                    <th></th>
+                    <th>Expense Name</th>
+                    <th>Expense Price</th>
+                </tr>
+                <tr class="tot">
+                    <th>Total Expenses</th>
+                    <th></th>
+                    <th id="total-sum">0</th>
+                </tr>
+            </table>
+        </table>
     </div>
 
     <script src="/js/script.js"></script>
