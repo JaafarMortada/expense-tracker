@@ -2,7 +2,7 @@ function expenseRow(name, price) {
     return `
         <tr>
             <td>
-                <span class="remove" style="cursor: pointer;">&#128465</span>
+                <span class="remove-row" style="cursor: pointer;">&#128465</span>
             </td>
             <td>
                 ${name}
@@ -19,10 +19,11 @@ function addExpenseRow() {
     const expense_price_input = $("#expense-price")
     console.log(expense_name_input.val())
     if (expense_name_input.val().trim() === "" || expense_price_input.val().trim() === "" ) return
-
-    $('#expenses-table tr#total_row').before(expenseRow(expense_name_input.val() ,
-        expense_price_input.val()))
-    
+    const new_row = $(expenseRow(expense_name_input.val(), expense_price_input.val()))
+    new_row.find(".remove-row").click(function () {
+        new_row.remove()
+    })
+    $('#expenses-table tr#total_row').before(new_row)
     expense_name_input.val("")
     expense_price_input.val("")
 }
