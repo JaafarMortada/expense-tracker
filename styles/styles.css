@@ -1,5 +1,33 @@
 
+*{
+    margin:0;
 
+}
+
+body, .expense-tracker, .input-fields, .input-with-label, .title{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.expense-tracker{
+    flex: 1;
+    gap: 2rem;
+    align-content: center;
+}
+
+.title{
+    align-content: center;
+}
+
+.input-fields{
+    flex: 1;
+    gap: 1rem;
+}
+
+.input-with-label{
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
 
 table, th, td {
     border: 2px solid black;
