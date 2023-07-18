@@ -22,7 +22,7 @@
                 <label for="expense-price">Price in USD:</label>
                 <input id="expense-price" type="number" min="0" step="1" placeholder="Expense price...">
             </div>
-            <button>Add to the table</button>
+            <button id="add-row-btn">Add to the table</button>
         </div>
         <table>
             <table id="expenses-table">
@@ -31,15 +31,15 @@
                     <th>Expense Name</th>
                     <th>Expense Price</th>
                 </tr>
-                <tr class="tot">
-                    <th>Total Expenses</th>
-                    <th></th>
-                    <th id="total-sum">0</th>
+                <tr id="total_row">
+                    <td>Total Expenses</td>
+                    <td></td>
+                    <td class="total-sum">0</td>
                 </tr>
             </table>
         </table>
     </div>
 
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
