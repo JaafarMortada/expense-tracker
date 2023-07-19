@@ -19,8 +19,8 @@
                 <input id="expense-name" type="text" placeholder="Expense name...">
             </div>
             <div class="input-with-label">
-                <label for="expense-price">Price in USD:</label>
-                <input id="expense-price" type="number" min="0" step="1" placeholder="Expense price...">
+                <label for="expense-price">Expense Price:</label>
+                <input id="expense-price" type="number" min="0" step="1" placeholder="Price in USD...">
             </div>
             <button id="add-row-btn">Add to the table</button>
         </div>
@@ -32,10 +32,9 @@
                         <th>Expense Name</th>
                         <th>Expense Price</th>
                     </tr>
-                    <tr id="total_row">
+                    <tr id="total_row" class="total-row">
                         <td>Total Expenses</td>
-                        <td></td>
-                        <td class="total-sum">0</td>
+                        <td class="total-sum" colspan="2">0 USD</td>
                     </tr>
                 </table>
             </table>

@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 *{
     margin:0;
-
+    font-family: 'Roboto Mono', monospace;
+    color: #FFFFFF;
 }
 
 body, .expense-tracker, .input-fields, .input-with-label, .title{
@@ -9,16 +11,37 @@ body, .expense-tracker, .input-fields, .input-with-label, .title{
     flex-flow: column wrap;
 }
 
+body{
+    background-color: #121212;
+}
 .expense-tracker{
     flex: 1;
     gap: 2rem;
     align-content: center;
+    width: 100%;
 }
 
 .title{
     align-content: center;
+    background-color: #292929;
+    padding: 1rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 5px 5px 10px #BB86FC;
+    font-size: larger;
+    /* opacity: 87%; */
+    z-index: 1;
+    position: sticky;
+    top:0;
 }
-
+h1{
+    font-size: 3rem;
+    align-self: center;
+}
+h4{
+    font-size: 1rem;
+    align-self: center;
+}
 .input-fields{
     flex: 1;
     gap: 1rem;
@@ -27,10 +50,77 @@ body, .expense-tracker, .input-fields, .input-with-label, .title{
 .input-with-label{
     flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
+    opacity: 87%;
+    width: 80%;
+    align-self: center;
 }
 
-table, th, td {
-    border: 2px solid black;
-    border-collapse: collapse;
-    padding: 0.5rem;
+input{
+    width: 65%;
+    border-radius: 5px;
+    height: 2.5rem;
+    color: #000000;
+    padding-left: 1rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    font-size: 1.2rem;
   }
+  
+  input:focus {
+    opacity: 87%;;
+  }
+
+input:focus{
+    box-shadow: 2px 2px 5px #BB86FC;
+    transition: 0.3s;
+}
+
+button{
+    background-color: #BB86FC;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 10px;
+    width: 80%;
+    align-self: center;
+    font-size: 1.5rem;
+    color: #000000;
+    opacity: 50%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+button:hover{
+    opacity: 87%;
+    box-shadow: 5px 1px 10px rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+}
+.table-div{
+    flex: 1;
+    width: 60%;
+}
+table, th, td {
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: center;
+    opacity: 87%;
+    margin-bottom: 1.5rem;
+    }
+
+table{
+    width: 100%;
+}
+
+th, .total-row{
+    font-size: 2rem;
+    background-color: rgba(187, 134, 252,0.12);
+}
+
+
+.remove-row{
+    color: #BB86FC;
+    font-size: 2.5rem;
+}
+

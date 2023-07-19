@@ -26,12 +26,12 @@ function addExpenseRow() {
         new_row.remove()
         const price_to_remove = new_row.find(".td-price")
         total_expenses -= parseFloat(price_to_remove.text())
-        $('.total-sum').text(total_expenses)
+        $('.total-sum').text(total_expenses + " USD")
     })
     $('#expenses-table tr#total_row').before(new_row)
     expense_name_input.val("")
     expense_price_input.val("")
-    $('.total-sum').text(total_expenses)
+    $('.total-sum').text(total_expenses + " USD")
 }
 
 
