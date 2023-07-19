@@ -1,2 +1,3 @@
 # expense-tracker
-## simple expense tracker built using jQuery
+## Simple expense tracker built using jQuery
+page link: https://jaafarmortada.github.io/expense-tracker/
